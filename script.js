@@ -36,3 +36,26 @@ const media = calcularMedia(numeros);
 function executarOperacao(a, b, operacaoCallback) {
   return operacaoCallback(a, b);
 }
+
+out.innerHTML += "Operações básicas:\n";
+out.innerHTML += `Soma: ${soma(5, 3)}\n`;
+out.innerHTML += `Subtração: ${subtracao(5, 3)}\n`;
+out.innerHTML += `Multiplicação: ${multiplicacao(5, 3)}\n`;
+out.innerHTML += `Divisão: ${divisao(5, 3)}\n\n`;
+
+out.innerHTML += "Manipulação de Array:\n";
+out.innerHTML += `Números: ${numeros.join(", ")}\n`;
+out.innerHTML += `Números pares: ${pares.join(", ")}\n`;
+out.innerHTML += `Média: ${media.toFixed(2)}\n\n`;
+
+out.innerHTML += "Função com Callback:\n";
+out.innerHTML += `Executando callback (multiplicação): ${executarOperacao(
+  4,
+  5,
+  multiplicacao
+)}\n`;
+out.innerHTML += `Executando callback (soma): ${executarOperacao(
+  10,
+  2,
+  soma
+)}\n`;
